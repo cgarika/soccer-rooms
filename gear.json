@@ -1,0 +1,799 @@
+{
+ "version": 1,
+ "what": "GameNest gear table (Pool, Bumper Bash, Carrom, Table Soccer, Mini Golf, Bowling). One file, copied into the app (Tests/Fixtures/gear/gear.json -> a generated header), the six room servers and the wallet.",
+ "statCap": 10,
+ "levelCost": [
+  0,
+  0,
+  300,
+  600,
+  1000,
+  1500,
+  2500,
+  4000,
+  6000,
+  9000,
+  13000,
+  18000,
+  24000
+ ],
+ "rarity": {
+  "common": {
+   "min": 1,
+   "max": 6
+  },
+  "rare": {
+   "min": 2,
+   "max": 8
+  },
+  "epic": {
+   "min": 3,
+   "max": 10
+  },
+  "legendary": {
+   "min": 5,
+   "max": 12
+  }
+ },
+ "plusCountsAs": "epic",
+ "rules": {
+  "lm1": "min(10, level - 1)"
+ },
+ "games": {
+  "pool": {
+   "slots": [
+    "cue",
+    "chalk",
+    "glove"
+   ],
+   "stats": [
+    "power",
+    "aim",
+    "spin",
+    "shot"
+   ]
+  },
+  "brawl": {
+   "slots": [
+    "body",
+    "engine",
+    "bumper"
+   ],
+   "stats": [
+    "weight",
+    "bump",
+    "speed",
+    "boost"
+   ]
+  },
+  "carrom": {
+   "slots": [
+    "striker",
+    "powder",
+    "cglove"
+   ],
+   "stats": [
+    "power",
+    "aim",
+    "glide",
+    "shot"
+   ]
+  },
+  "soccer": {
+   "slots": [
+    "discs",
+    "keeper",
+    "boots"
+   ],
+   "stats": [
+    "power",
+    "aim",
+    "reach",
+    "shot"
+   ]
+  },
+  "golf": {
+   "slots": [
+    "putter",
+    "gball",
+    "grip"
+   ],
+   "stats": [
+    "power",
+    "aim",
+    "roll",
+    "shot"
+   ]
+  },
+  "bowling": {
+   "slots": [
+    "bball",
+    "shoes",
+    "wrist"
+   ],
+   "stats": [
+    "hook",
+    "power",
+    "steady",
+    "aim"
+   ]
+  }
+ },
+ "slots": {
+  "cue": {
+   "game": "pool",
+   "stats": [
+    {
+     "id": "power",
+     "rule": "lm1"
+    },
+    {
+     "id": "aim",
+     "rule": "lm1"
+    }
+   ]
+  },
+  "chalk": {
+   "game": "pool",
+   "stats": [
+    {
+     "id": "spin",
+     "rule": "lm1"
+    }
+   ]
+  },
+  "glove": {
+   "game": "pool",
+   "stats": [
+    {
+     "id": "shot",
+     "rule": "lm1"
+    }
+   ]
+  },
+  "body": {
+   "game": "brawl",
+   "stats": [
+    {
+     "id": "weight",
+     "rule": "lm1"
+    },
+    {
+     "id": "bump",
+     "rule": "lm1"
+    }
+   ]
+  },
+  "engine": {
+   "game": "brawl",
+   "stats": [
+    {
+     "id": "speed",
+     "rule": "lm1"
+    },
+    {
+     "id": "boost",
+     "rule": "lm1"
+    }
+   ]
+  },
+  "bumper": {
+   "game": "brawl",
+   "stats": [
+    {
+     "id": "bump",
+     "rule": "lm1"
+    }
+   ]
+  },
+  "striker": {
+   "game": "carrom",
+   "stats": [
+    {
+     "id": "power",
+     "rule": "lm1"
+    },
+    {
+     "id": "aim",
+     "rule": "lm1"
+    }
+   ]
+  },
+  "powder": {
+   "game": "carrom",
+   "stats": [
+    {
+     "id": "glide",
+     "rule": "lm1"
+    }
+   ]
+  },
+  "cglove": {
+   "game": "carrom",
+   "stats": [
+    {
+     "id": "shot",
+     "rule": "lm1"
+    }
+   ]
+  },
+  "discs": {
+   "game": "soccer",
+   "stats": [
+    {
+     "id": "power",
+     "rule": "lm1"
+    },
+    {
+     "id": "aim",
+     "rule": "lm1"
+    }
+   ]
+  },
+  "keeper": {
+   "game": "soccer",
+   "stats": [
+    {
+     "id": "reach",
+     "rule": "lm1"
+    }
+   ]
+  },
+  "boots": {
+   "game": "soccer",
+   "stats": [
+    {
+     "id": "shot",
+     "rule": "lm1"
+    }
+   ]
+  },
+  "putter": {
+   "game": "golf",
+   "stats": [
+    {
+     "id": "power",
+     "rule": "lm1"
+    },
+    {
+     "id": "aim",
+     "rule": "lm1"
+    }
+   ]
+  },
+  "gball": {
+   "game": "golf",
+   "stats": [
+    {
+     "id": "roll",
+     "rule": "lm1"
+    }
+   ]
+  },
+  "grip": {
+   "game": "golf",
+   "stats": [
+    {
+     "id": "shot",
+     "rule": "lm1"
+    }
+   ]
+  },
+  "bball": {
+   "game": "bowling",
+   "stats": [
+    {
+     "id": "hook",
+     "rule": "lm1"
+    },
+    {
+     "id": "power",
+     "rule": "lm1"
+    }
+   ]
+  },
+  "shoes": {
+   "game": "bowling",
+   "stats": [
+    {
+     "id": "steady",
+     "rule": "lm1"
+    }
+   ]
+  },
+  "wrist": {
+   "game": "bowling",
+   "stats": [
+    {
+     "id": "aim",
+     "rule": "lm1"
+    }
+   ]
+  }
+ },
+ "starter": {
+  "cue": "cue:standard",
+  "chalk": "chalk:classic",
+  "glove": "glove:leather",
+  "body": "car:classic",
+  "engine": "engine:stock",
+  "bumper": "bumper:rubber",
+  "striker": "striker:classic",
+  "powder": "powder:classic",
+  "cglove": "cglove:classic",
+  "discs": "discs:classic",
+  "keeper": "keeper:classic",
+  "boots": "boots:classic",
+  "putter": "putter:classic",
+  "gball": "gball:classic",
+  "grip": "grip:classic",
+  "bball": "bball:classic",
+  "shoes": "shoes:classic",
+  "wrist": "wrist:classic"
+ },
+ "catalogRarity": {
+  "F": "common",
+  "C": "common",
+  "R": "rare",
+  "E": "epic",
+  "P": "epic",
+  "X": "legendary",
+  "L": "legendary"
+ },
+ "newItemPrices": {
+  "common": 1000,
+  "rare": 2500,
+  "epic": 6000,
+  "legendary": 25000
+ },
+ "items": {
+  "cue:standard": {
+   "slot": "cue",
+   "rarity": "common",
+   "name": "Standard cue"
+  },
+  "cue:carbon": {
+   "slot": "cue",
+   "rarity": "rare",
+   "name": "Carbon cue"
+  },
+  "cue:walnut": {
+   "slot": "cue",
+   "rarity": "common",
+   "name": "Walnut cue"
+  },
+  "cue:pearl": {
+   "slot": "cue",
+   "rarity": "rare",
+   "name": "Pearl cue"
+  },
+  "cue:marble": {
+   "slot": "cue",
+   "rarity": "rare",
+   "name": "Marble cue"
+  },
+  "cue:sapphire": {
+   "slot": "cue",
+   "rarity": "epic",
+   "name": "Sapphire cue"
+  },
+  "cue:blackgold": {
+   "slot": "cue",
+   "rarity": "epic",
+   "plus": true,
+   "name": "Black gold cue"
+  },
+  "cue:rosegold": {
+   "slot": "cue",
+   "rarity": "epic",
+   "name": "Rose gold cue"
+  },
+  "cue:emerald": {
+   "slot": "cue",
+   "rarity": "epic",
+   "name": "Emerald cue"
+  },
+  "cue:frost": {
+   "slot": "cue",
+   "rarity": "epic",
+   "name": "Frost cue"
+  },
+  "cue:maharaja": {
+   "slot": "cue",
+   "rarity": "legendary",
+   "pass": true,
+   "name": "Maharaja cue"
+  },
+  "chalk:classic": {
+   "slot": "chalk",
+   "rarity": "common",
+   "name": "Classic chalk"
+  },
+  "chalk:tacky": {
+   "slot": "chalk",
+   "rarity": "rare",
+   "name": "Tacky chalk"
+  },
+  "chalk:pro": {
+   "slot": "chalk",
+   "rarity": "epic",
+   "name": "Pro chalk"
+  },
+  "chalk:gilded": {
+   "slot": "chalk",
+   "rarity": "legendary",
+   "name": "Gilded chalk"
+  },
+  "glove:leather": {
+   "slot": "glove",
+   "rarity": "common",
+   "name": "Leather glove"
+  },
+  "glove:suede": {
+   "slot": "glove",
+   "rarity": "rare",
+   "name": "Suede glove"
+  },
+  "glove:carbon": {
+   "slot": "glove",
+   "rarity": "epic",
+   "name": "Carbon glove"
+  },
+  "glove:golden": {
+   "slot": "glove",
+   "rarity": "legendary",
+   "name": "Golden glove"
+  },
+  "car:classic": {
+   "slot": "body",
+   "rarity": "common",
+   "name": "Classic racer"
+  },
+  "car:stripes": {
+   "slot": "body",
+   "rarity": "common",
+   "name": "Racing stripes"
+  },
+  "car:checker": {
+   "slot": "body",
+   "rarity": "common",
+   "name": "Checker racer"
+  },
+  "car:camo": {
+   "slot": "body",
+   "rarity": "common",
+   "name": "Camo racer"
+  },
+  "car:flame": {
+   "slot": "body",
+   "rarity": "rare",
+   "name": "Flame racer"
+  },
+  "car:chrome": {
+   "slot": "body",
+   "rarity": "rare",
+   "name": "Chrome racer"
+  },
+  "car:candy": {
+   "slot": "body",
+   "rarity": "rare",
+   "name": "Candy racer"
+  },
+  "car:pearl": {
+   "slot": "body",
+   "rarity": "epic",
+   "name": "Pearl racer"
+  },
+  "car:ice": {
+   "slot": "body",
+   "rarity": "rare",
+   "name": "Ice racer"
+  },
+  "car:gold": {
+   "slot": "body",
+   "rarity": "epic",
+   "plus": true,
+   "name": "Gold royal"
+  },
+  "engine:stock": {
+   "slot": "engine",
+   "rarity": "common",
+   "name": "Stock engine"
+  },
+  "engine:tuned": {
+   "slot": "engine",
+   "rarity": "rare",
+   "name": "Tuned engine"
+  },
+  "engine:turbo": {
+   "slot": "engine",
+   "rarity": "epic",
+   "name": "Turbo engine"
+  },
+  "engine:nitro": {
+   "slot": "engine",
+   "rarity": "legendary",
+   "name": "Nitro engine"
+  },
+  "bumper:rubber": {
+   "slot": "bumper",
+   "rarity": "common",
+   "name": "Rubber bumper"
+  },
+  "bumper:soft": {
+   "slot": "bumper",
+   "rarity": "rare",
+   "name": "Soft bumper"
+  },
+  "bumper:gilded": {
+   "slot": "bumper",
+   "rarity": "epic",
+   "name": "Gilded bumper"
+  },
+  "bumper:spring": {
+   "slot": "bumper",
+   "rarity": "legendary",
+   "name": "Spring bumper"
+  },
+  "cue:dragon": {
+   "slot": "cue",
+   "rarity": "legendary",
+   "name": "Dragon cue"
+  },
+  "car:red": {
+   "slot": "body",
+   "rarity": "epic",
+   "name": "Red racer"
+  },
+  "car:lava": {
+   "slot": "body",
+   "rarity": "epic",
+   "name": "Lava racer"
+  },
+  "car:comet": {
+   "slot": "body",
+   "rarity": "legendary",
+   "name": "Comet racer"
+  },
+  "striker:classic": {
+   "slot": "striker",
+   "rarity": "common",
+   "name": "Classic striker"
+  },
+  "striker:ivory": {
+   "slot": "striker",
+   "rarity": "rare",
+   "name": "Ivory striker"
+  },
+  "striker:sapphire": {
+   "slot": "striker",
+   "rarity": "epic",
+   "name": "Sapphire striker"
+  },
+  "striker:dragon": {
+   "slot": "striker",
+   "rarity": "legendary",
+   "name": "Dragon striker"
+  },
+  "powder:classic": {
+   "slot": "powder",
+   "rarity": "common",
+   "name": "Classic powder"
+  },
+  "powder:ivory": {
+   "slot": "powder",
+   "rarity": "rare",
+   "name": "Ivory powder"
+  },
+  "powder:sapphire": {
+   "slot": "powder",
+   "rarity": "epic",
+   "name": "Sapphire powder"
+  },
+  "powder:dragon": {
+   "slot": "powder",
+   "rarity": "legendary",
+   "name": "Dragon powder"
+  },
+  "cglove:classic": {
+   "slot": "cglove",
+   "rarity": "common",
+   "name": "Classic glove"
+  },
+  "cglove:ivory": {
+   "slot": "cglove",
+   "rarity": "rare",
+   "name": "Ivory glove"
+  },
+  "cglove:sapphire": {
+   "slot": "cglove",
+   "rarity": "epic",
+   "name": "Sapphire glove"
+  },
+  "cglove:dragon": {
+   "slot": "cglove",
+   "rarity": "legendary",
+   "name": "Dragon glove"
+  },
+  "discs:classic": {
+   "slot": "discs",
+   "rarity": "common",
+   "name": "Classic discs"
+  },
+  "discs:chrome": {
+   "slot": "discs",
+   "rarity": "rare",
+   "name": "Chrome discs"
+  },
+  "discs:opal": {
+   "slot": "discs",
+   "rarity": "epic",
+   "name": "Opal discs"
+  },
+  "discs:dragon": {
+   "slot": "discs",
+   "rarity": "legendary",
+   "name": "Dragon discs"
+  },
+  "keeper:classic": {
+   "slot": "keeper",
+   "rarity": "common",
+   "name": "Classic keeper"
+  },
+  "keeper:chrome": {
+   "slot": "keeper",
+   "rarity": "rare",
+   "name": "Chrome keeper"
+  },
+  "keeper:opal": {
+   "slot": "keeper",
+   "rarity": "epic",
+   "name": "Opal keeper"
+  },
+  "keeper:dragon": {
+   "slot": "keeper",
+   "rarity": "legendary",
+   "name": "Dragon keeper"
+  },
+  "boots:classic": {
+   "slot": "boots",
+   "rarity": "common",
+   "name": "Classic boots"
+  },
+  "boots:chrome": {
+   "slot": "boots",
+   "rarity": "rare",
+   "name": "Chrome boots"
+  },
+  "boots:opal": {
+   "slot": "boots",
+   "rarity": "epic",
+   "name": "Opal boots"
+  },
+  "boots:dragon": {
+   "slot": "boots",
+   "rarity": "legendary",
+   "name": "Dragon boots"
+  },
+  "putter:classic": {
+   "slot": "putter",
+   "rarity": "common",
+   "name": "Classic putter"
+  },
+  "putter:pearl": {
+   "slot": "putter",
+   "rarity": "rare",
+   "name": "Pearl putter"
+  },
+  "putter:sapphire": {
+   "slot": "putter",
+   "rarity": "epic",
+   "name": "Sapphire putter"
+  },
+  "putter:dragon": {
+   "slot": "putter",
+   "rarity": "legendary",
+   "name": "Dragon putter"
+  },
+  "gball:classic": {
+   "slot": "gball",
+   "rarity": "common",
+   "name": "Classic ball"
+  },
+  "gball:pearl": {
+   "slot": "gball",
+   "rarity": "rare",
+   "name": "Pearl ball"
+  },
+  "gball:sapphire": {
+   "slot": "gball",
+   "rarity": "epic",
+   "name": "Sapphire ball"
+  },
+  "gball:dragon": {
+   "slot": "gball",
+   "rarity": "legendary",
+   "name": "Dragon ball"
+  },
+  "grip:classic": {
+   "slot": "grip",
+   "rarity": "common",
+   "name": "Classic grip"
+  },
+  "grip:pearl": {
+   "slot": "grip",
+   "rarity": "rare",
+   "name": "Pearl grip"
+  },
+  "grip:sapphire": {
+   "slot": "grip",
+   "rarity": "epic",
+   "name": "Sapphire grip"
+  },
+  "grip:dragon": {
+   "slot": "grip",
+   "rarity": "legendary",
+   "name": "Dragon grip"
+  },
+  "bball:classic": {
+   "slot": "bball",
+   "rarity": "common",
+   "name": "Classic ball"
+  },
+  "bball:pearl": {
+   "slot": "bball",
+   "rarity": "rare",
+   "name": "Pearl ball"
+  },
+  "bball:sapphire": {
+   "slot": "bball",
+   "rarity": "epic",
+   "name": "Sapphire ball"
+  },
+  "bball:dragon": {
+   "slot": "bball",
+   "rarity": "legendary",
+   "name": "Dragon ball"
+  },
+  "shoes:classic": {
+   "slot": "shoes",
+   "rarity": "common",
+   "name": "Classic shoes"
+  },
+  "shoes:pearl": {
+   "slot": "shoes",
+   "rarity": "rare",
+   "name": "Pearl shoes"
+  },
+  "shoes:sapphire": {
+   "slot": "shoes",
+   "rarity": "epic",
+   "name": "Sapphire shoes"
+  },
+  "shoes:dragon": {
+   "slot": "shoes",
+   "rarity": "legendary",
+   "name": "Dragon shoes"
+  },
+  "wrist:classic": {
+   "slot": "wrist",
+   "rarity": "common",
+   "name": "Classic guard"
+  },
+  "wrist:pearl": {
+   "slot": "wrist",
+   "rarity": "rare",
+   "name": "Pearl guard"
+  },
+  "wrist:sapphire": {
+   "slot": "wrist",
+   "rarity": "epic",
+   "name": "Sapphire guard"
+  },
+  "wrist:dragon": {
+   "slot": "wrist",
+   "rarity": "legendary",
+   "name": "Dragon guard"
+  }
+ }
+}

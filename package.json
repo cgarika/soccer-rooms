@@ -1,0 +1,17 @@
+{
+  "name": "soccer-rooms",
+  "version": "1.0.0",
+  "description": "Self-hosted multiplayer Table Soccer: turn-based flick-disc football for two. The server owns the physics.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node test/run.js && node test/plus_wallet.js && node test/roomcode.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "socket.io": "^4.8.3"
+  },
+  "devDependencies": {
+    "socket.io-client": "^4.8.3"
+  }
+}
