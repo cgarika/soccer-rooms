@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "test": "node test/run.js && node test/plus_wallet.js && node test/roomcode.js"
+    "test": "node test/run.js && node test/plus_wallet.js && node test/roomcode.js && node test/voice.js && node test/friendsplayed.js"
   },
   "dependencies": {
     "express": "^5.2.1",

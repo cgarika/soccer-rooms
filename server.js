@@ -15,6 +15,8 @@ const { Server } = require("socket.io");
 const { PHYS, simulate, compressTail, formation } = require("./physics");
 const { createPool, LEVELS } = require("./bots");
 const Reactions = require("./reactions");   // the cartoon stickers (2026-10-15)
+const Voice = require("./voice");   // voice chat in private rooms, EOS (2026-11-18; the file every server shares)
+const Played = require("./friendsplayed");   // Friends: "last played with" when a game ends (2026-11-19; the file every server shares)
 const Quick = require("./quickmatch");   // quick play and ranked (2026-10-24)
 const Plus = require("./plus");   // GameNest Plus: the room's flag and each player's look (2026-10-16)
 const Gear = require("./gear");   // the gear table and what it does (gear.js, 2026-11-09)
@@ -253,6 +255,8 @@ function publicRoom(room) {
     v: room.v,
     ...Reactions.view(room),   // 2026-10-15: reactionsOn and the last reactions
     ...Quick.view(room),   // quick play and ranked (2026-10-24)
+    ...Voice.view(room),   // voice chat (2026-11-18): gnVoice { on, peers }
+    ...Played.view(room, "soccer"),   // Friends (2026-11-19): reports a finished game once; adds no field
   };
 }
 
@@ -646,6 +650,7 @@ io.on("connection", (socket) => {
   Plus.guardSocket(socket);   // the wallet's signed entitlement: every event's `plus` is the checked answer (the Nest Wallet repo, contrib/ROLLOUT.md)
   Quick.hook(socket); Quick.connection(socket);   // before the server's own events
   const currentRoom = () => rooms.get(socket.data.roomCode);
+  Voice.wire({ on: (ev, fn) => socket.on(ev, (payload) => fn(obj(payload))), room: currentRoom, me: () => socket.data.playerId, bump: bump, emit: (ev, d) => socket.emit(ev, d) });   // voice chat in private rooms (2026-11-18)
   Reactions.wire({ on: (ev, fn) => socket.on(ev, (payload) => fn(obj(payload))), room: currentRoom, me: () => socket.data.playerId,
     isHost: (r) => r.host === socket.data.playerId, bump });
   const me = () => { const r = currentRoom(); return r ? r.players.find((p) => p.id === socket.data.playerId) : null; };
